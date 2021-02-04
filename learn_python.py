@@ -652,7 +652,7 @@ x = 5
 print(x > 3 or x < 4)
 
 x = 5
-print(not(3 < x < 10))
+print(not (3 < x < 10))
 
 x = ["apple", "banana"]
 y = ["apple", "banana"]
@@ -672,12 +672,12 @@ print("pineapple" not in x)
 
 x = ["apple", "banana"]
 y = ["apple", "banana"]
-z  = x
+z = x
 print(x is not z)
 print(x is not y)
 print(x != y)
 
-#Python Lists
+# Python Lists
 thislist = ["apple", "banana", "cherry"]
 print(thislist)
 
@@ -688,7 +688,7 @@ thislist = ["apple", "banana", "cherry"]
 print(len(thislist))
 
 list1 = ["apple", "banana", "cherry"]
-list2 = [1, 5,7, 9, 3]
+list2 = [1, 5, 7, 9, 3]
 list3 = [True, False, False]
 
 print(list1)
@@ -778,7 +778,7 @@ thislist.pop(0)
 print(thislist)
 
 thislist = ["apple", "banana", "cherry"]
-del thislist [0]
+del thislist[0]
 print(thislist)
 
 thislist = ["apple", "banana", "cherry"]
@@ -787,4 +787,82 @@ del thislist
 
 thislist = ["apple", "banana", "cherry"]
 thislist.clear()
+print(thislist)
+
+thislist = ["apple", "banana", "cherry"]
+for x in thislist:
+    print(x)
+
+thislist = ["apple", "banana", "cherry"]
+for i in range(len(thislist)):
+    print(thislist[i])
+
+thislist = ["apple", "banana", "cherry"]
+i = 0
+while i < len(thislist):
+    print(thislist[i])
+    i = i + 1
+
+thislist = ["apple", "banana", "cherry"]
+[print(x) for x in thislist]
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = []
+
+for x in fruits:
+    if "a" in x:
+        newlist.append(x)
+
+print(newlist)
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+
+newlist = [x for x in fruits if x != "apple"]
+print(newlist)
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x for x in fruits]
+print(newlist)
+
+newlist = [x for x in range(10)]
+print(newlist)
+
+newlist = [x for x in range(10) if x < 5]
+print(newlist)
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x.upper() for x in fruits]
+print(newlist)
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = ["hello" for x in fruits]
+print(newlist)
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x if x != "banana" else "orange" for x in fruits]
+print(newlist)
+
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort()
+print(thislist)
+
+thislist = [100, 50, 64, 82, 23]
+thislist.sort()
+print(thislist)
+
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort(reverse=True)
+print(thislist)
+
+thislist = [100, 50, 64, 82, 23]
+thislist.sort(reverse=True)
+print(thislist)
+
+
+def myfunc(n):
+    return abs(n - 50)
+
+
+thislist = [100, 50, 65, 82, 23]
+thislist.sort(key=myfunc)
 print(thislist)
