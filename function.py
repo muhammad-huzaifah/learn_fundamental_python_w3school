@@ -107,3 +107,11 @@ def tri_recursion(k):
 
 print("\nRecursion Example Results")
 tri_recursion(6)
+
+
+# exercise
+def my_function():
+    print("Halo dari suatu fungsi")
+
+
+my_function()
